@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://gdp-vs-le.streamlit.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![XGBoost](https://img.shields.io/badge/XGBoost-R²%3D0.91-orange)](https://xgboost.readthedocs.io)
 [![SHAP](https://img.shields.io/badge/SHAP-Interpretability-blue)](https://shap.readthedocs.io)
@@ -19,7 +19,7 @@
 
 ## 🚀 Live Dashboard
 
-> **[→ Launch Interactive Dashboard](https://your-app.streamlit.app)** *(link updates after Streamlit Cloud deployment)*
+> **[→ Launch Interactive Dashboard](https://gdp-vs-le.streamlit.app)**
 
 Explore the full interactive analysis with real-time policy simulation, country trajectories, causal evidence, and ML model explanations — no setup required.
 
