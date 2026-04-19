@@ -1,0 +1,149 @@
+# DATA DICTIONARY — GDP vs Life Expectancy master dataset
+Generated: 2026-04-18T09:11:30.776555+00:00
+Rows: 725 | Columns: 133
+Countries: 29 | Years: 2000–2024
+
+## Identifier columns
+  - iso3: country ISO-3 code
+  - country: country
+  - year: year
+  - income_group: income_group
+
+## World Bank WDI indicators
+  - gdp_per_capita_usd                       src=NY.GDP.PCAP.CD            present=yes
+  - gdp_per_capita_ppp                       src=NY.GDP.PCAP.PP.CD         present=yes
+  - gdp_growth                               src=NY.GDP.MKTP.KD.ZG         present=yes
+  - gni_per_capita_atlas                     src=NY.GNP.PCAP.CD            present=yes
+  - gini                                     src=SI.POV.GINI               present=yes
+  - poverty_rate_215                         src=SI.POV.DDAY               present=yes
+  - unemployment                             src=SL.UEM.TOTL.ZS            present=yes
+  - inflation_cpi                            src=FP.CPI.TOTL.ZG            present=yes
+  - gov_expenditure_pct_gdp                  src=GC.XPN.TOTL.GD.ZS         present=yes
+  - fdi_inflows_pct_gdp                      src=BX.KLT.DINV.WD.GD.ZS      present=yes
+  - remittances_pct_gdp                      src=BX.TRF.PWKR.DT.GD.ZS      present=yes
+  - trade_pct_gdp                            src=NE.TRD.GNFS.ZS            present=yes
+  - agriculture_pct_gdp                      src=NV.AGR.TOTL.ZS            present=yes
+  - industry_pct_gdp                         src=NV.IND.TOTL.ZS            present=yes
+  - services_pct_gdp                         src=NV.SRV.TOTL.ZS            present=yes
+  - life_expectancy                          src=SP.DYN.LE00.IN            present=yes
+  - life_expectancy_male                     src=SP.DYN.LE00.MA.IN         present=yes
+  - life_expectancy_female                   src=SP.DYN.LE00.FE.IN         present=yes
+  - infant_mortality                         src=SP.DYN.IMRT.IN            present=yes
+  - under5_mortality                         src=SH.DYN.MORT               present=yes
+  - maternal_mortality                       src=SH.STA.MMRT               present=yes
+  - adult_mortality_male                     src=SP.DYN.AMRT.MA            present=yes
+  - adult_mortality_female                   src=SP.DYN.AMRT.FE            present=yes
+  - health_exp_pct_gdp                       src=SH.XPD.CHEX.GD.ZS         present=yes
+  - health_exp_per_capita                    src=SH.XPD.CHEX.PC.CD         present=yes
+  - oop_health_exp_pct                       src=SH.XPD.OOPC.CH.ZS         present=yes
+  - hospital_beds_per_1000                   src=SH.MED.BEDS.ZS            present=yes
+  - physicians_per_1000                      src=SH.MED.PHYS.ZS            present=yes
+  - nurses_per_1000                          src=SH.MED.NUMW.P3            present=yes
+  - immunization_dpt                         src=SH.IMM.IDPT               present=yes
+  - immunization_measles                     src=SH.IMM.MEAS               present=yes
+  - uhc_index                                src=SH_UHC_SCI                present=yes
+  - water_access                             src=SH.H2O.BASW.ZS            present=yes
+  - sanitation_access                        src=SH.STA.BASS.ZS            present=yes
+  - tb_incidence                             src=SH.TBS.INCD               present=yes
+  - education_exp_pct_gdp                    src=SE.XPD.TOTL.GD.ZS         present=yes
+  - literacy_adult                           src=SE.ADT.LITR.ZS            present=yes
+  - primary_enroll                           src=SE.PRM.NENR               present=yes
+  - secondary_enroll                         src=SE.SEC.NENR               present=yes
+  - tertiary_enroll                          src=SE.TER.ENRR               present=yes
+  - gender_parity_secondary                  src=SE.ENR.SECO.FM.ZS         present=yes
+  - wgi_political_stability                  src=GOV_WGI_PV.EST            present=yes
+  - wgi_gov_effectiveness                    src=GOV_WGI_GE.EST            present=yes
+  - wgi_regulatory_quality                   src=GOV_WGI_RQ.EST            present=yes
+  - wgi_rule_of_law                          src=GOV_WGI_RL.EST            present=yes
+  - wgi_corruption_control                   src=GOV_WGI_CC.EST            present=yes
+  - wgi_voice_accountability                 src=GOV_WGI_VA.EST            present=yes
+  - military_exp_pct_gdp                     src=MS.MIL.XPND.GD.ZS         present=yes
+  - tax_revenue_pct_gdp                      src=GC.TAX.TOTL.GD.ZS         present=yes
+  - internet_users_pct                       src=IT.NET.USER.ZS            present=yes
+  - mobile_subs_per_100                      src=IT.CEL.SETS.P2            present=yes
+  - population_total                         src=SP.POP.TOTL               present=yes
+  - population_density                       src=EN.POP.DNST               present=yes
+  - urban_pop_pct                            src=SP.URB.TOTL.IN.ZS         present=yes
+  - fertility_rate                           src=SP.DYN.TFRT.IN            present=yes
+  - age_dependency_ratio                     src=SP.POP.DPND               present=yes
+  - age_0_14_pct                             src=SP.POP.0014.TO.ZS         present=yes
+  - age_15_64_pct                            src=SP.POP.1564.TO.ZS         present=yes
+  - age_65_plus_pct                          src=SP.POP.65UP.TO.ZS         present=yes
+
+## WHO Global Health Observatory indicators
+  - hale_total                               src=WHOSIS_000002             present=yes
+
+## OWID COVID indicators
+  - total_deaths_per_million                 src=covid_deaths_per_million  present=missing
+  - excess_mortality_cumulative_per_million  src=covid_excess_mortality_per_million present=missing
+  - people_fully_vaccinated_per_hundred      src=covid_fully_vaccinated_pct present=missing
+  - stringency_index                         src=covid_stringency_index    present=missing
+  - total_tests_per_thousand                 src=covid_tests_per_thousand  present=missing
+  - new_cases_per_million                    src=covid_new_cases_per_million present=missing
+  - icu_patients_per_million                 src=covid_icu_per_million     present=missing
+  - reproduction_rate                        src=covid_reproduction_rate   present=missing
+
+## UNDP HDI series
+  - undp_eys
+  - undp_eys_f
+  - undp_eys_m
+  - undp_gnipc
+  - undp_hdi
+  - undp_hdi_f
+  - undp_hdi_m
+  - undp_hdi_rank
+  - undp_le
+  - undp_le_f
+  - undp_le_m
+  - undp_mys
+  - undp_mys_f
+  - undp_mys_m
+
+## Engineered features
+  - education_exp_pct_gdp__x__urban_pop_pct
+  - education_exp_pct_gdp_lag1
+  - education_exp_pct_gdp_lag2
+  - education_exp_pct_gdp_lag3
+  - education_exp_pct_gdp_lag5
+  - gdp_growth_lag1
+  - gdp_growth_lag2
+  - gdp_growth_lag3
+  - gdp_growth_lag5
+  - gdp_per_capita_ppp__x__education_exp_pct_gdp
+  - gdp_per_capita_ppp__x__wgi_gov_effectiveness
+  - gdp_per_capita_ppp_growth_pct
+  - gdp_per_capita_ppp_lag1
+  - gdp_per_capita_ppp_lag2
+  - gdp_per_capita_ppp_lag3
+  - gdp_per_capita_ppp_lag5
+  - gdp_per_capita_usd_growth_pct
+  - gdp_per_capita_usd_lag1
+  - gdp_per_capita_usd_lag2
+  - gdp_per_capita_usd_lag3
+  - gdp_per_capita_usd_lag5
+  - health_exp_pct_gdp__x__physicians_per_1000
+  - health_exp_pct_gdp_lag1
+  - health_exp_pct_gdp_lag2
+  - health_exp_pct_gdp_lag3
+  - health_exp_pct_gdp_lag5
+  - health_exp_per_capita_growth_pct
+  - health_exp_per_capita_lag1
+  - health_exp_per_capita_lag2
+  - health_exp_per_capita_lag3
+  - health_exp_per_capita_lag5
+  - log_gdp_per_capita_ppp
+  - log_gdp_per_capita_usd
+  - log_gni_per_capita_atlas
+  - log_health_exp_per_capita
+  - log_population_density
+  - log_population_total
+  - population_total_growth_pct
+  - urban_pop_pct_growth_pct
+  - urban_pop_pct_lag1
+  - urban_pop_pct_lag2
+  - urban_pop_pct_lag3
+  - urban_pop_pct_lag5
+  - wgi_gov_effectiveness_lag1
+  - wgi_gov_effectiveness_lag2
+  - wgi_gov_effectiveness_lag3
+  - wgi_gov_effectiveness_lag5

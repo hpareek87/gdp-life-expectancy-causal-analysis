@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Difference-in-differences estimates (TWFE panel). Treatment variable: post$\times$treated interaction. Dependent variable: life expectancy (years).}
+\label{tab:did}
+\begin{tabular}{lccc}
+\toprule
+ & Indonesia JKN universal i... & Vietnam health insurance ... & China New Rural Cooperati... \\
+\midrule
+ATT & 0.540** & -0.965*** & -0.641 \\
+ & (0.261) & (0.283) & (0.913) \\
+\midrule
+Parallel trends p & 1.000 & 0.997 & 1.000 \\
+Observations & 72 & 76 & 110 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\small\item $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.10$. Cluster-robust SE (by country) in parentheses. Parallel trends test: joint significance of treated$\times$year interactions in pre-period.\end{tablenotes}
+\end{table}

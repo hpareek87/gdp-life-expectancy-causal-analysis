@@ -1,0 +1,4 @@
+gdp_per_capita_ppp_threshold,log_gdp_threshold,slope_below,slope_above,chow_f_stat,chow_p_value,n_below,n_above
+1271.0,7.147,3.1268,6.5115,3.8,0.0227,131,594
+9090.0,9.115,5.5534,6.0352,9.05,0.0001,346,379
+25950.0,10.164,6.369,2.2016,9.94,0.0001,469,256

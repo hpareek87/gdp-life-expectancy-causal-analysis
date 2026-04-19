@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+  \centering
+  \caption{ML Model Performance: Life Expectancy Prediction (2000--2024)}
+  \label{tab:model_performance}
+  \begin{tabular}{lcccccrr}
+    \toprule
+    Model & $R^2_{\text{train}}$ & $R^2_{\text{test}}$ &
+    RMSE$_{\text{train}}$ & RMSE$_{\text{test}}$ &
+    MAE$_{\text{test}}$ & $N_{\text{train}}$ & $N_{\text{test}}$ \\
+    \midrule
+    OLS              & 0.9680 & 0.8218 & 2.082 & 4.614 & 2.678 & 551 & 174 \\
+    Ridge            & 0.9452 & 0.8740 & 2.724 & 3.880 & 2.309 & 551 & 174 \\
+    Lasso            & 0.9448 & 0.8806 & 2.734 & 3.776 & 2.215 & 551 & 174 \\
+    Q50              & 0.9397 & 0.8739 & 2.856 & 3.880 & 2.127 & 551 & 174 \\
+    RandomForest     & 0.9895 & 0.8956 & 1.190 & 3.532 & 1.912 & 551 & 174 \\
+    XGBoost          & 1.0000 & 0.9055 & 0.012 & 3.359 & 1.683 & 551 & 174 \\
+    LSTM             & 0.9732 & 0.9095 & 1.852 & 3.287 & 1.845 & 406 & 174 \\
+    Ensemble         & 0.9533 & 0.9128 & 2.370 & 3.227 & 1.745 & 455 & 174 \\
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+    \small
+    \item Train: 2000--2018; Test: 2019--2024. RMSE and MAE in years.
+    \item LSTM uses 5-year sliding windows (PyTorch, 2-layer 64 units).
+    \item Ensemble = Ridge meta-learner over RF + XGBoost + LSTM OOF predictions.
+  \end{tablenotes}
+\end{table}

@@ -1,0 +1,76 @@
+# DATA QUALITY REPORT
+Generated: 2026-04-18T09:11:30.778903+00:00
+
+## Coverage
+  Countries in:  30
+  Countries out: 29
+  Excluded for >30% missingness: ['SSD (South Sudan)']
+  Final shape: (725, 133)
+
+## Imputation
+  Total feature cells: 61,500
+  Cells imputed:       9,826
+  % imputed:           15.98%
+  Method: sklearn IterativeImputer (BayesianRidge), country-by-country.
+  Indicators entirely missing for a country are pre-filled with the income-group median.
+
+## Missingness — per indicator (BEFORE imputation)
+  undp_hdi_rank                                  96.00%
+  covid_icu_per_million                          94.27%
+  covid_excess_mortality_per_million             92.00%
+  covid_tests_per_thousand                       90.27%
+  covid_fully_vaccinated_pct                     88.13%
+  covid_stringency_index                         88.00%
+  covid_reproduction_rate                        84.00%
+  covid_new_cases_per_million                    80.40%
+  covid_deaths_per_million                       80.00%
+  literacy_adult                                 79.60%
+  secondary_enroll                               63.33%
+  primary_enroll                                 53.20%
+  gini                                           51.20%
+  poverty_rate_215                               51.20%
+  gov_expenditure_pct_gdp                        41.60%
+  gender_parity_secondary                        40.40%
+  tax_revenue_pct_gdp                            39.33%
+  education_exp_pct_gdp                          38.40%
+  physicians_per_1000                            38.00%
+  hospital_beds_per_1000                         36.67%
+  nurses_per_1000                                32.67%
+  tertiary_enroll                                31.87%
+  undp_hdi_f                                     18.27%
+  undp_hdi_m                                     18.27%
+  trade_pct_gdp                                  14.67%
+
+## Range-check violations
+  None.
+
+## IQR outlier flags (k=3, per country)
+  gdp_per_capita_ppp                            2 outlier obs
+  life_expectancy                               5 outlier obs
+  inflation_cpi                                 12 outlier obs
+  gdp_growth                                    23 outlier obs
+
+## IMF cross-check (GDP per capita, USD)
+  Countries compared: 29
+  Exceeding 2% tolerance: 14
+  NGA Nigeria                   mean_diff=0.3039 max_diff=0.4450 n_years=25 (FLAG)
+  EGY Egypt                     mean_diff=0.1607 max_diff=0.2144 n_years=25 (FLAG)
+  TCD Chad                      mean_diff=0.1346 max_diff=0.4962 n_years=25 (FLAG)
+  MWI Malawi                    mean_diff=0.1186 max_diff=0.5728 n_years=25 (FLAG)
+  VNM Vietnam                   mean_diff=0.1013 max_diff=0.3387 n_years=25 (FLAG)
+  MDG Madagascar                mean_diff=0.0828 max_diff=0.0980 n_years=25 (FLAG)
+  BDI Burundi                   mean_diff=0.0734 max_diff=0.5696 n_years=25 (FLAG)
+  IDN Indonesia                 mean_diff=0.0666 max_diff=0.1394 n_years=25 (FLAG)
+  CAF Central African Republic  mean_diff=0.0533 max_diff=0.1095 n_years=25 (FLAG)
+  COD DR Congo                  mean_diff=0.0530 max_diff=0.1450 n_years=25 (FLAG)
+  AUS Australia                 mean_diff=0.0456 max_diff=0.1507 n_years=25 (FLAG)
+  PHL Philippines               mean_diff=0.0341 max_diff=0.0449 n_years=25 (FLAG)
+  LBR Liberia                   mean_diff=0.0204 max_diff=0.0521 n_years=25 (FLAG)
+  JPN Japan                     mean_diff=0.0202 max_diff=0.0440 n_years=25 (FLAG)
+  MOZ Mozambique                mean_diff=0.0150 max_diff=0.0236 n_years=25
+
+## Notes
+  - World Bank WDI is the primary source for life expectancy (SP.DYN.LE00.IN).
+  - WHO HALE supplements life expectancy with health-adjusted life years.
+  - OWID COVID series cover 2020–2024 only; missing in earlier years by design.
+  - UNDP HDI series end in their latest published year (typically t-2).
